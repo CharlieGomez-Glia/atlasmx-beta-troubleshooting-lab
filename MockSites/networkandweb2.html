@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruy's Second Credit Union</title>
+    
+    <script async src="https://api.glia.com/salemove_integration.js"></script>
+    
+    <style>
+        :root { 
+            --bg-dark: #0b0e14; /* Deep space Metroid vibe */
+            --panel-bg: #151a22; 
+            --neon-blue: #00f3ff; 
+            --electric-yellow: #ccff00; 
+            --text-main: #e0e6ed; 
+            --text-muted: #8b949e;
+        }
+        body { 
+            font-family: 'Segoe UI', system-ui, sans-serif; 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            margin: 0; 
+        }
+        
+        /* Marquee Effect (Marquesina) */
+        .marquee-container {
+            background-color: var(--neon-blue);
+            color: var(--bg-dark);
+            padding: 8px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            border-bottom: 2px solid var(--electric-yellow);
+        }
+        .marquee-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 15s linear infinite;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+        }
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        header { 
+            padding: 1.5rem 2rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--electric-yellow); text-shadow: 0 0 5px rgba(204, 255, 0, 0.3); }
+        nav a { color: var(--neon-blue); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; text-transform: uppercase; }
+        nav a:hover { color: var(--electric-yellow); }
+        
+        .dashboard { 
+            display: grid; grid-template-columns: 2fr 1fr; gap: 20px; 
+            max-width: 1200px; margin: 40px auto; padding: 0 20px; 
+        }
+        .card { 
+            background: var(--panel-bg); 
+            border: 1px solid #333; 
+            border-top: 3px solid var(--neon-blue);
+            border-radius: 4px; padding: 25px; 
+        }
+        h2 { border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; color: var(--text-main); font-weight: 400; }
+        
+        .account-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dotted #333; }
+        .balance { font-size: 1.5rem; font-family: 'Courier New', monospace; color: var(--electric-yellow); }
+        .data-label { font-size: 0.75rem; color: var(--neon-blue); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+        .data-value { font-family: 'Courier New', monospace; font-size: 1.1rem; }
+        
+        .btn { 
+            background: transparent; color: var(--neon-blue); border: 1px solid var(--neon-blue); 
+            padding: 10px 20px; border-radius: 2px; cursor: pointer; width: 100%; 
+            text-transform: uppercase; font-weight: bold; transition: all 0.2s;
+        }
+        .btn:hover { background: var(--neon-blue); color: var(--bg-dark); box-shadow: 0 0 10px rgba(0, 243, 255, 0.3); }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #333; font-size: 0.95rem; }
+        th { color: var(--text-muted); font-weight: normal; font-size: 0.8rem; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <div class="marquee-container">
+        <div class="marquee-text">
+            Welcome to Ruy's Second Credit Union // The Credit Union for gamers // Secure. Fast. Decentralized. // System Online.
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">RUY'S 2ND CU</div>
+        <nav>
+            <a href="#">Inventory</a>
+            <a href="#">Quests (Transfers)</a>
+            <a href="#">Logs</a>
+            <a href="#">Comms</a>
+        </nav>
+    </header>
+
+    <div class="dashboard">
+        <div class="card">
+            <h2>CREDITS OVERVIEW</h2>
+            
+            <div class="account-row">
+                <div>
+                    <div class="data-label">Main Vault</div>
+                    <div class="data-value">************4421</div>
+                </div>
+                <div class="balance sm-mak">4,523,400.00 CR</div>
+            </div>
+
+            <div class="account-row" style="border-bottom: none;">
+                <div>
+                    <div class="data-label">Stash Cache</div>
+                    <div class="data-value">************9902</div>
+                </div>
+                <div class="balance">1,250,000.00 CR</div>
+            </div>
+
+            <h2 style="margin-top: 30px;">RECENT LOGS</h2>
+            <table>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Source/Dest</th>
+                    <th style="text-align: right;">Yield</th>
+                </tr>
+                <tr>
+                    <td>Jun 01, 2026</td>
+                    <td>RAID LOOT - SECTOR 7G</td>
+                    <td style="text-align: right; color: var(--electric-yellow);">+5,240.00</td>
+                </tr>
+                <tr>
+                    <td>May 28, 2026</td>
+                    <td>VENDOR - POWER ARMOR UPGRADE</td>
+                    <td style="text-align: right; color: #ff4d4d;">-142.50</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>PLAYER PROFILE</h2>
+            <div style="margin-bottom: 20px;">
+                <div class="data-label">Alias</div>
+                <div class="data-value" style="font-family: inherit;">Ruy PlayerOne</div>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <div class="data-label">Secure Comms Link</div>
+                <div class="data-value">(555) 867-5309</div>
+            </div>
+
+            <div style="margin-bottom: 30px;">
+                <div class="data-label">Unique Citizen ID (SSN)</div>
+                <input type="password" value="123-45-6789" readonly style="border:none; background:transparent; padding:0; outline:none; color:var(--text-main); font-family:'Courier New', monospace; font-size:1.1rem; width:100%;">
+            </div>
+
+            <button class="btn">Upgrade Profile</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            console.log("%c[SYSTEM] Booting Metroid-OS Kernel v4.0.1...", "color: #00f3ff; font-weight: bold; background: #000; padding: 4px;");
+            
+            setTimeout(() => {
+                console.warn("MemoryLeak Detected in Module: renderer.wasm. Attempting garbage collection...");
+                // The CSP will intentionally block this connection, generating a console error
+                // to serve as both a trap and part of the CSP exercise.
+                console.log("[WSS] Attempting WebSocket handshake on wss://rt.ruycu.internal/stream...");
+                try {
+                    new WebSocket("wss://rt.ruycu.internal/stream");
+                } catch (e) {}
+            }, 800);
+
+            setTimeout(() => {
+                console.error("Failed to load texture pack: net::ERR_FILE_NOT_FOUND (hud_overlay.png)");
+                console.info("Falling back to minimal UI mode.");
+            }, 2500);
+
+            window.generateHash = function(data) {
+                console.time("crypto-cycle");
+                const hash = btoa(encodeURIComponent(data + "_gamer_salt"));
+                console.timeEnd("crypto-cycle");
+                return hash;
+            };
+        })();
+    </script>
+</body>
+</html>
