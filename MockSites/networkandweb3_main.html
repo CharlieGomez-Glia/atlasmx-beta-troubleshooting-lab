@@ -3,40 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Credit Union | Apply for a Loan</title>
+    <title>Ruy's 21st Credit Union</title>
     <script async src="https://api.glia.com/salemove_integration.js"></script>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
-        header { background-color: #004b87; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
-        .nav-links a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
-        .hero { background-color: #e2e8f0; padding: 40px 30px; text-align: center; border-bottom: 3px solid #004b87; }
-        .container { max-width: 900px; margin: 40px auto; padding: 20px; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; }
-        .trust-badges { display: flex; justify-content: space-around; margin-top: 30px; font-size: 0.9em; color: #666; }
-        .iframe-container { margin-top: 20px; border: 1px solid #ccc; border-radius: 5px; overflow: hidden; }
+        :root {
+            --deep-blue: #002d72;
+            --retro-yellow: #ffc82c;
+            --clean-white: #ffffff;
+            --bg-gray: #f4f4f4;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: var(--bg-gray); color: #333; }
+        header { background-color: var(--deep-blue); color: var(--clean-white); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 5px solid var(--retro-yellow); }
+        
+        /* Retro Effect Header */
+        h1, h2 { font-family: 'Courier New', Courier, monospace; text-transform: uppercase; letter-spacing: 2px; text-shadow: 3px 3px 0px var(--retro-yellow); color: var(--deep-blue); margin: 0; }
+        header h2 { color: var(--clean-white); text-shadow: 2px 2px 0px #000000; }
+        
+        .nav-links a { color: var(--clean-white); margin-left: 20px; text-decoration: none; font-weight: bold; font-family: 'Courier New', Courier, monospace; }
+        .nav-links a:hover { color: var(--retro-yellow); }
+        .hero { background-color: var(--clean-white); padding: 40px 30px; text-align: center; border-bottom: 2px dashed var(--deep-blue); }
+        .hero p { font-weight: bold; color: #555; }
+        .container { max-width: 900px; margin: 40px auto; padding: 20px; background: var(--clean-white); box-shadow: 0 4px 0px var(--deep-blue); border: 2px solid var(--deep-blue); border-radius: 8px; }
+        .trust-badges { display: flex; justify-content: space-around; margin-top: 30px; font-size: 0.9em; color: #666; font-family: 'Courier New', Courier, monospace; font-weight: bold; }
+        .iframe-container { margin-top: 20px; border: 3px solid var(--retro-yellow); background: var(--bg-gray); border-radius: 5px; overflow: hidden; }
         iframe { width: 100%; height: 550px; border: none; display: block; }
-        footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 40px; font-size: 0.8em; }
+        footer { text-align: center; padding: 20px; background: var(--deep-blue); color: var(--clean-white); margin-top: 40px; font-size: 0.8em; border-top: 5px solid var(--retro-yellow); }
     </style>
 </head>
 <body>
 
     <header>
-        <h2>Apex Credit Union</h2>
+        <h2>Ruy's 21st CU</h2>
         <div class="nav-links">
-            <a href="#">Checking</a>
-            <a href="#">Savings</a>
+            <a href="#">Treats</a>
+            <a href="#">Toys</a>
             <a href="#">Loans</a>
-            <a href="#">Contact Us</a>
+            <a href="#">Contact</a>
         </div>
     </header>
 
     <div class="hero">
-        <h1>Secure Personal Loan Application</h1>
-        <p>Fast approvals, low rates, and member-first service. Need help? Chat with an agent now!</p>
+        <h1>Ruy's 21st Credit Union</h1>
+        <p>The Banking of the Futuristic Pet Owners 🐾🤖</p>
     </div>
 
     <div class="container">
-        <h3>Step 1: Borrower Information</h3>
-        <p>Please complete our secure encrypted form below to begin your application process.</p>
+        <h3 style="font-family: 'Courier New'; color: var(--deep-blue);">Step 1: Pet Owner Information</h3>
+        <p>Please complete our secure form below to begin your application process.</p>
         
         <div class="iframe-container">
             <iframe src="https://charliegomez-glia.github.io/atlasmx-beta-troubleshooting-lab/MockSites/networkandweb3_sub.html" title="Secure Loan Form"></iframe>
@@ -44,13 +57,13 @@
 
         <div class="trust-badges">
             <span>🔒 256-bit Encryption</span>
-            <span>🏦 NCUA Insured</span>
-            <span>⭐ Equal Housing Lender</span>
+            <span>🐕 Good Boy Certified</span>
+            <span>⭐ Equal Pet Lender</span>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Apex Credit Union. All rights reserved. Not actual legal advice.</p>
+        <p>&copy; 2026 Ruy's 21st Credit Union. All rights reserved.</p>
     </footer>
 
 </body>
